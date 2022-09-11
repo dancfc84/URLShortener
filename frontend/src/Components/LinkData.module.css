@@ -1,0 +1,78 @@
+.edit_link_container{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+
+.edit_input{
+  min-height: 25px;
+  width: 99%;
+  padding: 0 0;
+}
+
+.copy_button{
+  border: 1px solid #3d405b;
+  transition: 1s ease;
+  color: #3d405b;
+  padding: 6px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background-color: #e07a5f;
+  border-radius: 5px;
+}
+
+.edit_button{
+  border: 1px solid #3d405b;
+  transition: 1s ease;
+  color: #3d405b;
+  padding: 6px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background-color: #e07a5f;
+  border-radius: 5px;
+}
+
+
+svg{
+  stroke:#3d405b;
+  fill:none;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.link_row td{
+  margin: 1rem;
+}
+
+#button_td{
+  padding: 1rem 0.5rem ;
+}
+
+
+.save_button{
+  border: 1px solid #3d405b;
+  transition: 1s ease;
+  color: #3d405b;
+  padding: 6px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background-color: #f2cc8f;
+  width: 50%;
+}
+
+
+.cancel_button{
+  border: 1px solid #3d405b;
+  transition: 1s ease;
+  color: white;
+  padding: 6px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background-color: #3d405b;
+  width: 50%;
+}
+
+.full_link{
+  overflow: hidden;
+}
