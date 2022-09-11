@@ -104,8 +104,8 @@ export default function LinkData(props) {
           onClick={selectLink}
         >
           <a
-            href={`http://localhost:3000/${link.short}`}
-          >{`localhost:3000/${link.short}`}</a>
+            href={`https://t1ny-url.netlify.app/${link.short}`}
+          >{`https://t1ny-url.netlify.app/${link.short}`}</a>
         </td>
         <td>{link.clicks}</td>
         <td id={styles.button_td}>
