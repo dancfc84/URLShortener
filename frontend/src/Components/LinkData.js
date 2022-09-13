@@ -104,7 +104,7 @@ export default function LinkData(props) {
           onClick={selectLink}
         >
           <a
-            href={`https://t1ny-url.netlify.app/${link.short}`}
+            href={`https://t1ny-url.netlify.app/${link.short}`} target="_blank" rel="noopener noreferrer"
           >{`https://t1ny-url.netlify.app/${link.short}`}</a>
         </td>
         <td>{link.clicks}</td>
