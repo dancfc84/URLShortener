@@ -113,7 +113,7 @@ export default function LinkData(props) {
             className={styles.copy_button}
             onClick={copyLink}
           >
-            Copyy
+            Copy
           </button>
         </td>
         <td id={styles.button_td}>
