@@ -53,7 +53,7 @@ Once I had worked out the logic that I wanted to implement for my URL shortener,
 I also created a Jira board for the project, this helped me to keep track of all outstanding tasks.
 
 
-![Screenshot - Jira](https://github.com/dancfc84/URLShortener/blob/master/frontend/screenshots/wireframe.png) 
+![Screenshot - Jira](https://github.com/dancfc84/URLShortener/blob/master/frontend/screenshots/jira.png) 
 
 ## Build Code Process
 
@@ -122,6 +122,7 @@ If you click on the edit button it sets the showEditInput state as true and will
 
 ![Screenshot - showeditinput](https://github.com/dancfc84/URLShortener/blob/master/frontend/screenshots/showeditinput.png) 
 
+![Screenshot - editscreen](https://github.com/dancfc84/URLShortener/blob/master/frontend/screenshots/editscreenshot.png)
 
 ### Redirect Component
 
