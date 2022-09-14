@@ -10,7 +10,6 @@ export default function Homepage() {
     const getData = async () => {
       try {
         const { data } = await axios.get(`${baseUrl}/${linkId}`);
-        console.log(data);
         window.location.href = data
       } catch (error) {
         console.log(error);

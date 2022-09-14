@@ -12,6 +12,7 @@ export default function LinkData(props) {
     full: link.full,
   });
 
+  
   const copyLink = async () => {
     navigator.clipboard.writeText(`localhost:3000/${link.short}`);
     try {

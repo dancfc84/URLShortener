@@ -19,7 +19,7 @@ class BaseModel:
 
   #This adds a method for remove
 
-   # ! Add a method to remove
+ 
   def remove(self):
     db.session.delete(self)
     db.session.commit()

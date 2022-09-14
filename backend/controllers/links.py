@@ -14,6 +14,7 @@ from marshmallow.exceptions import ValidationError
 router = Blueprint("links", __name__)
 link_schema = LinkSchema()
 
+
 @router.route("/links", methods=["GET"])
 def get_all_links():
 
@@ -57,7 +58,6 @@ def get_specific_link(link_id):
             results_list.append(r_dict)
         
         url =  results_list[0]['full']
-        print(url)
 
         return url
 
@@ -72,24 +72,28 @@ def post_new_link():
 
     link_dictionary = request.json
 
+    #creates a row in the database using the Full URL provided in the input
     try:
         link = link_schema.load(link_dictionary)
     
     except ValidationError as e:
         return { "errors": e.messages, "message": "something went wrong" }
 
+
     while True:
 
+        # Creates a random 6-digit num, then checks whether number has already been allocated
         shortNum = randint(100000, 999999)
         existingLink = LinkModel.query.filter_by(short=shortNum).first()
 
         try: 
+            #If no full URL has already been allocated the 6-digit number, it assigns the new link that 6 digit code
             if existingLink == None:
                 link.short = shortNum
 
             else:
                 continue
-
+                
             link.save()
             return link_schema.jsonify(link), HTTPStatus.CREATED
 
@@ -119,6 +123,7 @@ def delete_link(link_id):
     return link_schema.jsonify(existing_link), HTTPStatus.OK
 
 
+
 @router.route("/<int:link_id>", methods=["PUT"])
 def update_link(link_id):
     link_dictionary = request.json
@@ -137,6 +142,7 @@ def update_link(link_id):
         return { "errors": e.messages, "message": "Something went wrong" }
 
     return link_schema.jsonify(existing_link), HTTPStatus.OK
+
 
 
 
